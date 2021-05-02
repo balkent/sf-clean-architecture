@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Infrastructure\:
+    resource: '../../src/infrastructure'
+
+  Infrastructure\Command\:
+    resource: '../../src/Infrastructure/Command'
+    tags: ['console.command']
+
+  Infrastructure\Controller\:
+    resource: '../../src/Infrastructure/Controller'
+    tags: ['controller.service_arguments']
